@@ -1,0 +1,154 @@
+.container {
+  padding: 0;
+  display: flex;
+
+  & > .left {
+    width: 63%;
+    padding: 56px 20px 40px 90px;
+
+    .title {
+      font: {
+        size: 28px;
+        weight: 700;
+      }
+      line-height: 16px;
+      margin-bottom: 16px;
+    }
+
+    .filter {
+      font: {
+        size: 16px;
+        weight: 600;
+      }
+      color: #666666;
+      margin-bottom: 12px;
+
+      img {
+        margin-right: 8px;
+      }
+    }
+
+    .btnGroup {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #EAEAEA;
+      margin-bottom: 32.5px;
+      
+      .left {
+        display: flex;
+        align-items: flex-start;
+
+        button {
+          background: #FAFAFA;
+          margin-right: 10px;
+          height: 40px;
+          padding: 0 28px;
+          border: 1px solid #EAEAEA;
+          border-radius: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #888888;
+
+          span {
+            line-height: 16px;
+  
+            font: {
+              size: 16px;
+              weight: 500;
+            }
+          }
+
+          img {
+            margin-right: 14px;
+          }
+        }
+      }
+
+      .right {
+        flex-shrink: 0;
+        button {
+          border-radius: 5px;
+          background: #FC0808;
+          font: {
+            size: 16px;
+            weight: 500
+          }
+          color: #FFF;
+          height: 40px;
+          border: none;
+          padding: 0 28px;
+        }
+      }
+    }
+  }
+
+  & > .right {
+    width: 37%;
+    min-height: 100vh;
+    background: #F1F2F3;
+
+    .mapContainer {
+      height: 100vh;
+      position: sticky;
+      top: 0;
+    }
+  }
+}
+
+@media(max-width: 1440px) {
+  .container {
+    .left {
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    & > .right {
+      display: none;
+    }
+  }
+}
+
+@media(max-width: 850px) {
+  .container {
+    & > .left {
+      padding: 20px;
+      .title {
+        font-size: 18px;
+        margin-bottom: 7px;
+      }
+
+      .filter {
+        font-size: 12px;
+        margin-bottom: 10px;
+
+        img {
+          width: 11px;
+          height: 10px;
+          margin-right: 6px;
+        }
+      }
+
+      .btnGroup {
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+
+        button {
+          height: 35px!important;
+          font-size: 12px!important;
+          padding: 0 15px!important;
+        }
+        .left {
+          padding-left: 0;
+          margin-bottom: 8px;
+        }
+
+        .right {
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+}

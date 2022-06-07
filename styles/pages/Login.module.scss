@@ -1,0 +1,330 @@
+.header {
+  background: #021b9c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 85px;
+}
+
+.container {
+  padding: 40px 20px;
+  min-height: 878px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fafafa;
+  position: relative;
+
+  .bg {
+    width: 100%;
+    height: 1500px;
+    position: absolute;
+    background: #ffffff;
+    z-index: 1;
+    transform: rotate(-14deg);
+    top: -80px;
+    left: 350px;
+    border-radius: 5px;
+  }
+
+  .form {
+    width: 561px;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    box-shadow: 0 3px 25px #00000005;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 75px 30px 85px;
+    background: #fff;
+    position: relative;
+    z-index: 2;
+
+    & > div {
+      width: 100%;
+    }
+
+    .title {
+      font: {
+        size: 24px;
+        weight: 700;
+      }
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .birthday {
+      p {
+        margin-bottom: 6px;
+        font-size: 16px;
+        font-weight: 700;
+        span {
+          font-size: 14px;
+          color: gray;
+          font-weight: 400;
+        }
+      }
+
+      div {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        input {
+          height: 48px;
+          width: 32%;
+          border-radius: 5px;
+          border: none;
+          background: #eff7fc;
+          color: #666666;
+          padding: 0 25px;
+
+          font: {
+            size: 16px;
+            weight: 700;
+          }
+        }
+      }
+    }
+
+    .subTitle {
+      text-align: center;
+      margin-bottom: 16px;
+      font: {
+        size: 16px;
+        weight: 700;
+      }
+
+      span {
+        color: #021b9c;
+        cursor: pointer;
+      }
+    }
+
+    .description {
+      font-size: 15px;
+      color: #848484;
+      margin-bottom: 21px;
+      text-align: center;
+
+      span {
+        color: #76c303;
+      }
+    }
+
+    @mixin inputField {
+      width: 100%;
+      height: 48px;
+      border-radius: 5px;
+      border: none;
+      background: #eff7fc;
+      color: #666666;
+      padding: 0 25px;
+
+      font: {
+        size: 16px;
+        weight: 700;
+      }
+    }
+
+    .username {
+      width: 100%;
+      margin-bottom: 15px;
+      input {
+        @include inputField;
+      }
+    }
+
+    .password {
+      position: relative;
+      width: 100%;
+      margin-bottom: 15px;
+
+      button {
+        height: 100%;
+        background: none;
+        border: none;
+        padding: 0 25px;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      input {
+        @include inputField;
+        padding-right: 70px;
+      }
+    }
+
+    .recovery {
+      align-self: flex-end;
+      margin-bottom: 21px;
+      color: #848484;
+      cursor: pointer;
+
+      font: {
+        size: 15px;
+        weight: 500;
+      }
+    }
+
+    .signin {
+      width: 100%;
+      height: 48px;
+      background: #021b9c;
+      border-radius: 5px;
+      color: #fff;
+      border: none;
+      margin-bottom: 50px;
+      font: {
+        size: 16px;
+        weight: 700;
+      }
+    }
+
+    .social {
+      width: 100%;
+      border-top: 1px solid #c9c9c9;
+      padding-top: 33.5px;
+      position: relative;
+
+      span {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        padding: 0 20px;
+        color: #848484;
+        font: {
+          size: 15px;
+          weight: 500;
+        }
+      }
+
+      & > div {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 12px;
+
+        button {
+          background: #fff;
+          border: 1px solid #eaeaea;
+          border-radius: 5px;
+          width: 145px;
+          height: 66px;
+        }
+      }
+
+      p {
+        font-size: 14px;
+        text-align: right;
+        color: gray;
+
+        a {
+          color: #021b9c;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 70px;
+    img {
+      width: 120px;
+      height: 30px;
+    }
+  }
+  .container {
+    min-height: calc(100vh - 70px);
+    .bg {
+      display: none;
+    }
+
+    .form {
+      padding: 24px 28px 32px 33px !important;
+
+      .title {
+        font-size: 20px;
+        margin-bottom: 2px;
+      }
+
+      .subTitle {
+        font-size: 12px;
+        margin-bottom: 8px;
+      }
+
+      .description {
+        font-size: 12px;
+        line-height: 18px;
+        margin-bottom: 12px;
+      }
+
+      .username,
+      .password {
+        margin-bottom: 10px;
+        input {
+          height: 40px;
+          padding: 0 15px;
+          font-size: 12px;
+        }
+      }
+
+      .birthday {
+        input {
+          height: 40px!important;
+          padding: 0 15px!important;
+          font-size: 12px!important;
+        }
+      }
+
+      .password {
+        margin-bottom: 7px;
+
+        input {
+          padding-right: 40px;
+        }
+
+        button {
+          padding: 0 15px;
+          img {
+            width: 13px;
+            height: 10px;
+          }
+        }
+      }
+
+      .recovery {
+        font-size: 12px;
+        margin-bottom: 12px;
+      }
+
+      .signin {
+        height: 40px;
+        font-size: 12px;
+        margin-bottom: 16px;
+      }
+
+      .social {
+        span {
+          font-size: 12px;
+        }
+
+        & > div {
+          button {
+            width: 90px;
+            height: 40px;
+
+            img {
+              width: 18px;
+              height: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,144 @@
+.container {
+  border: 1px solid #EAEAEA;
+  border-radius: 5px;
+  padding: 25px 20px 30px;
+
+  .header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 28.5px;
+    border-bottom: 1px solid #EAEAEA;
+
+    .avatar {
+      margin-right: 20px;
+    }
+
+    .detailInfo {
+      .name {
+        font: {
+          size: 18px;
+          weight: 700;
+        }
+        margin-bottom: 6px;
+      }
+
+      .history {
+        display: flex;
+        align-items: center;
+        margin-bottom: 6px;
+
+        & > span {
+          display: flex;
+          align-items: center;
+          font-size: 15px;
+          color: #888888;
+          margin-right: 18px;
+
+          img {
+            margin-right: 10px;
+          }
+        }
+      }
+
+      .write {
+        font-size: 15px;
+        color: #888888;
+
+        span {
+          color: #021B9C;
+          margin-left: 6px;
+        }
+      }
+    }
+  }
+
+  .body {
+    padding-top: 20.5px;
+
+    & > div {
+      &:first-child {
+        margin-bottom: 26px;
+        display: flex;
+        
+        & > span {
+          margin-left: 8px;
+          font-size: 15px;
+          color: #666666;
+
+          span {
+            margin-left: 20px;
+          }
+        }
+      }
+
+      .description {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .container {
+    padding: 20px!important;
+
+    .header {
+      padding-bottom: 16px!important;
+
+      .avatar {
+        margin-right: 10px;
+        img {
+          width: 68px;
+          height: 68px;
+        }
+      }
+
+      .detailInfo {
+        .name {
+          font-size: 14px;
+          margin-bottom: 2px!important;
+        }
+
+        .history {
+          span {
+            font-size: 11px!important;
+            margin-right: 8px!important;
+
+            img {
+              width: 14px;
+              height: 14px;
+              margin-right: 5px!important;
+            }
+          }
+        }
+
+        .write {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .body {
+      padding-top: 12px!important;
+
+      & > div {
+        &:first-child {
+          margin-bottom: 14px!important;
+          & > span {
+            font-size: 12px;
+            margin-left: 3px;
+
+            span {
+              margin-left: 3px;
+            }
+          }
+        }
+
+      }
+      .description {
+        font-size: 14px!important;
+      }
+    }
+  } 
+}

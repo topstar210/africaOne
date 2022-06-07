@@ -1,0 +1,17 @@
+.textField {
+  width: 100%;
+  
+  textarea {
+    width: 100%;
+    height: 170px;
+    border-radius: 5px;
+    border: 1px solid #EAEAEA;
+    font: {
+      size: 14px;
+      weight: 500;
+    }
+    color: #B2B2B2;
+    padding: 8px 15px;
+    margin-bottom: 10px;
+  }
+}

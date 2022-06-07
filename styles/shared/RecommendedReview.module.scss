@@ -1,0 +1,209 @@
+.review {
+  background: #FFF;
+  border: 1px solid #EAEAEA;
+  border-radius: 5px;
+  padding: 45px 40px;
+  margin-bottom: 20px;
+
+  .header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #EAEAEA;
+
+    .left {
+      width: 80px;
+      height: 80px;
+      flex-shrink: 0;
+      margin-right: 20px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .right {
+      .name {
+        font: {
+          size: 18px;
+          weight: 700;
+        }
+        margin-bottom: 5px;
+      }
+
+      .detail {
+        display: flex;
+        margin-bottom: 7px;
+
+        span {
+          font-size: 15px;
+          color: #888888;
+          margin-right: 20px;
+          display: flex;
+          align-items: center;
+
+          img {
+            margin-right: 10px;
+          }
+        }
+      }
+
+      .target {
+        font-size: 15px;
+        color: #888888;
+
+        span {
+          color: #021B9C;
+        }
+      }
+    }
+  }
+
+  .body {
+    padding-top: 20px;
+
+    .detail {
+      display: flex;
+      margin-bottom: 25px;
+
+      .star {
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 20px;
+          height: 18px;
+
+          margin-right: 5px;
+        }
+        font-size: 15px;
+        color: #666666;
+
+        span {
+          margin-left: 8px;
+          line-height: 1;
+        }
+      }
+
+      .date {
+        margin-left: 15px;
+        font-size: 15px;
+        color: #666666;
+      }
+    }
+
+    .description {
+      font-size: 16px;
+      line-height: 24px;
+      color: #000;
+    }
+
+    div {
+      &:last-child {
+        display: flex;
+
+        span {
+          display: flex;
+          align-items: center;
+          font-size: 11px;
+
+          img {
+            margin-right: 8px;
+          }
+        }
+
+        .interesting {
+          color: #427CDF;
+          padding-right: 15px;
+          margin-right: 15px;
+          border-right: 1px solid #EAEAEA;
+        }
+
+        .lol {
+          color: #FF9537;
+          padding-right: 15px;
+          margin-right: 15px;
+          border-right: 1px solid #EAEAEA;
+        }
+
+        .love {
+          color: #FF3F69;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .review {
+    margin-bottom: 15px;
+    padding: 20px;
+
+    .header {
+      padding-bottom: 16.5px;
+
+      .left {
+        width: 68px;
+        height: 68px;
+        margin-right: 11px;
+      }
+
+      .right {
+        .name {
+          font-size: 14px;
+          margin-bottom: 2px;
+        }
+        
+        .detail {
+          margin-bottom: 3px;
+          span {
+            font-size: 11px!important;
+            margin-right: 8.6px;
+
+            img {
+              margin-right: 5px;
+            }
+          }
+        }
+
+        .target {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .body {
+      padding-top: 12px;
+
+      .detail {
+        margin-bottom: 12px;
+
+        .star {
+          align-items: center;
+          img {
+            width: 14px;
+            height: 13px;
+            margin-right: 4.5px;
+          }
+
+          span {
+            margin-left: 4px;
+            font-size: 12px;
+          }
+        }
+
+        .date {
+          margin-left: 1px;
+          font-size: 12px;
+        }
+      }
+
+      .description {
+        margin-bottom: 12px;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+}

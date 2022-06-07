@@ -1,0 +1,192 @@
+.rootContainer {
+  display: flex;
+  justify-content: center;
+
+  .container {
+    max-width: 1260px;
+    width: 100%;
+    padding: 40px 20px;
+    min-height: 878px;
+
+    .title {
+      font: {
+        size: 32px;
+        weight: 700;
+      }
+      span {
+        color: #021B9C;
+        margin-right: 5px;
+      }
+    }
+
+    .back {
+      display: block;
+      color: #021B9C;
+      margin-bottom: 50px;
+      cursor: pointer;
+      font: {
+        size: 16px;
+        weight: 500;
+      }
+    }
+
+    .content {
+      display: flex;
+
+      .left {
+        width: 320px;
+        padding-right: 20px;
+        flex-shrink: 0;
+
+        p {
+          font: {
+            size: 16px;
+            weight: 500;
+          }
+          margin-bottom: 14px;
+          display: flex;
+          align-items: center;
+
+          img {
+            margin-right: 10px;
+          }
+        }
+
+        .steps {
+          .item {
+            display: flex;
+            padding: 16px 10px 16px 17px;
+            align-items: flex-start;
+            border: 1px solid #F2F0F0;
+            border-radius: 5px;
+            box-shadow: 0 3px 9px #00000010;
+            margin-bottom: 10px;
+
+            span:first-child {
+              margin-top: 3px;
+              width: 28px;
+              height: 28px;
+              border-radius: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-shrink: 0;
+              margin-right: 7px;
+              color: #FFF;
+              font-size: 14px;
+            }
+
+            span:last-child {
+              font: {
+                size: 16px;
+                weight: 500;
+              }
+              line-height: 20px;
+              color: #80858A;
+            }
+          }
+        }
+      }
+
+      .right {
+        width: 100%;
+        border: 2px dashed #D1D1D1;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 42px;
+
+        img {
+          margin-bottom: 36px;
+        }
+
+        .title {
+          font: {
+            size: 25px;
+            weight: 700;
+          }
+          margin-bottom: 5px;
+        }
+
+        .or {
+          font: {
+            size: 18px;
+            weight: 500;
+          }
+          margin-bottom: 13px;
+        }
+
+        button {
+          background: #76C303;
+          border-radius: 5px;
+          color: #FFF;
+          font: {
+            size: 14px;
+            weight: 700;
+          }
+          width: 166px;
+          height: 35px;
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 850px) {
+  .rootContainer {
+    .container {
+      .title {
+        font-size: 18px;
+      }
+
+      .back {
+        font-size: 12px;
+        margin-bottom: 16px;
+      }
+
+      .content {
+        flex-direction: column;
+
+        .left {
+          width: 100%;
+
+          & > p {
+            font-size: 14px;
+            margin-bottom: 14px;
+          }
+
+          .steps {
+            .item * {
+              font-size: 14px!important;
+            }
+          }
+        }
+
+        .right {
+          padding: 42px 52px;
+          img {
+            max-width: 400px;
+            width: 100%;
+          }
+          .title {
+            font-size: 16px;
+            margin-bottom: 7px;
+          }
+
+          .or {
+            font-size: 18px;
+            margin-bottom: 6px;
+          }
+
+          button {
+            width: 166px;
+            height: 35px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

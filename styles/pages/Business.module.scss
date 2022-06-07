@@ -1,0 +1,1097 @@
+.modal {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+
+  .bg {
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    opacity: 0.65;
+  }
+
+  .main {
+    position: absolute;
+    padding: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #FFF;
+    width: 460px;
+    height: 460px;
+    border-radius: 5px;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 20px;
+
+      .title {
+        font: {
+          size: 18px;
+          weight: 700;
+        }
+      }
+
+      .close {
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+
+    .body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .socialButtons {
+        margin-bottom: 10px;
+        width: 100%;
+        display: flex;
+
+        button {
+          height: 40px;
+          border: none;
+          width: 100%;
+        }
+
+        .facebook {
+          background: #4267B2;
+          border-radius: 5px 0 0 5px;
+        }
+
+        .whatsapp {
+          background: #06AD12;
+        }
+
+        .twitter {
+          background: #1DA1F2;
+          border-radius: 0 5px 5px 0;
+        }
+      }
+
+      .address {
+        width: 100%;
+        display: flex;
+        border: 1px solid #EAEAEA;
+        border-radius: 5px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        button {
+          border: none;
+          background: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 15px;
+        }
+      }
+
+      .or {
+        width: 100%;
+        padding: 11px;
+        display: flex;
+        justify-content: center;
+        font: {
+          size: 14px;
+          weight: 700;
+        }
+      }
+
+      .to {
+        width: 100%;
+        margin-bottom: 3px;
+
+        input {
+          padding: 0 18px;
+          font-size: 16px;
+          width: 100%;
+          border: 1px solid #EAEAEA;
+          border-radius: 5px;
+          height: 40px;
+        }
+      }
+
+      .note {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+
+        label {
+          font-size: 12px;
+          margin-bottom: 12px;
+        }
+
+        textarea {
+          border: 1px solid #EAEAEA;
+          border-radius: 5px;
+          padding: 9px 18px;
+          height: 87px;
+          font-size: 16px;
+        };
+      }
+
+      & > button {
+        background: #76C303;
+        border-radius: 5px;
+        width: 166px;
+        height: 35px;
+        color: #FFF;
+        border: none;
+        font: {
+          size: 14px;
+          height: 700;
+        }
+      }
+    }
+  }
+}
+
+.container {
+  background: #FAFAFA;
+
+  .banner {
+    position: relative;
+    overflow: hidden;
+
+    .slider {
+      height: 500px;
+    }
+
+    .bannerContainer {
+      pointer-events: none;
+      display: flex;
+      justify-content: center;
+      top: 0;
+      position: absolute;
+      width: 100%;
+      background: linear-gradient(#00000000, #00000099);
+      left: 0;
+      height: 100%;
+      padding: 0 20px;
+
+      .content {
+        max-width: 1260px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 50px 0;
+
+        & > .left {
+          display: flex;
+
+          .left {
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #98AA90;
+            border-radius: 50%;
+            margin-right: 38px;
+          }
+
+          .right {
+            color: #FFF;
+            .name {
+              font: {
+                size: 32px;
+                weight: 900;
+              }
+              margin-bottom: 8px;
+            }
+
+            .star {
+              display: flex;
+              align-items: center;
+
+              img {
+                width: 20px;
+                height: 18px;
+                margin-right: 6px;
+              }
+
+              span {
+                font: {
+                  font-size: 21px;
+                }
+                margin-left: 6px;
+              }
+            }
+
+            .services {
+              margin-bottom: 7px;
+              ul {
+                margin: 0;
+                padding: 0;
+                display: flex;
+
+                li {
+                  list-style-position: inside;
+                  font-size: 20px;
+                  margin-right: 37px;
+                }
+              }
+            }
+
+            .claimed {
+              margin-bottom: 7px;
+              color: #319C02;
+              display: flex;
+              align-items: center;
+
+              img {
+                margin-right: 9px;
+              }
+
+              font: {
+                size: 20px;
+                weight: 700;
+              }
+            }
+
+            .time {
+              font: {
+                size: 20px;
+                weight: 700;
+              }
+
+              span {
+                color: #59CF8D;
+              }
+            }
+          }
+        }
+
+        & > .right {
+          button {
+            font: {
+              size: 16px;
+              weight: 700
+            }
+            color: #FFF;
+            height: 35px;
+            pointer-events: auto;
+            padding: 0 30px;
+            border: 1px solid #FFFFFF;
+            border-radius: 5px;
+            background: none;
+          }
+        }
+      }
+    }
+  }
+
+  .mainContainer {
+    display: flex;
+    justify-content: center;
+
+    .mainContent {
+      width: 100%;
+      max-width: 1260px;
+      
+      .firstDiv {
+        max-width: 1260px;
+        width: 100%;
+        padding: 60px 20px 20px;
+        display: flex;
+
+        & > .left {
+          width: 67%;
+          
+          .toolbar {
+            display: flex;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #EAEAEA;
+
+            button {
+              height: 40px;
+              border: 1px solid #EAEAEA;
+              border-radius: 5px;
+              color: #666666;
+              padding: 0 28px;
+              display: flex;
+              align-items: center;
+              margin-right: 10px;
+
+              font: {
+                size: 16px;
+                weight: 500;
+              }
+
+              img {
+                margin-right: 10px;
+              }
+
+              &:first-child {
+                background: #76C303;
+                border: none;
+                color: #FFF;
+              }
+            }
+          }
+
+          .about {
+            margin: 31px 0 27px;
+            background: #FFF;
+            border: 1px solid #EAEAEA;
+            padding: 35px 35px 30px;
+            border-radius: 5px  ;
+
+            .title {
+              font: {
+                size: 22px;
+                weight: 700;
+              }
+              margin-bottom: 25px;
+              color: #000000;
+            }
+
+            .description {
+              font-size: 16px;
+              line-height: 24px;
+              color: #666666;
+            }
+          }
+
+          .covid19 {
+            margin-bottom: 24px;
+
+            .title {
+              font: {
+                size: 20px;
+                weight: 700;
+              }
+              color: #000;
+              margin-bottom: 25px;
+            }
+
+            .description {
+              font-size: 18px;
+              line-height: 28px;
+              color: #848484;
+            }
+          }
+
+          .services {
+            padding-bottom: 26px;
+            border-bottom: 1px solid #EAEAEA;
+
+            .title {
+              font: {
+                size: 22px;
+                weight: 700;
+              }
+              margin-bottom: 22px;
+            }
+
+            .content {
+              ul {
+                padding: 0;
+                margin: 0;
+                display: flex;
+
+                li {
+                  list-style-type: none;
+                  margin-right: 15px;
+
+                  img {
+                    margin-right: 8px;
+                  }
+                }
+              }
+            }
+          }
+
+          .paymentMethods {
+            padding: 30px 0 16px;
+            border-bottom: 1px solid #EAEAEA;
+            display: flex;
+            flex-wrap: wrap;
+
+            .item {
+              width: 33%;
+              display: flex;
+              align-content: center;
+              font-size: 18px;
+              color: #666666;
+              margin-bottom: 14px;
+
+              img {
+                margin-right: 14px;
+              }
+            }
+          }
+
+          .askCommunity {
+            padding: 24px 0 34px;
+
+            .header {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-bottom: 24px;
+
+              .title {
+                font: {
+                  size: 22px;
+                  weight: 700;
+                }
+              }
+
+              button {
+                border: none;
+                background: none;
+                font-size: 18px;
+                display: flex;
+                align-content: center;
+
+                img {
+                  margin-left: 12px;
+                }
+              }
+            }
+
+            .body {
+              font-size: 18px;
+            }
+          }
+        }
+      
+        & > .right {
+          padding-left: 20px;
+          width: 33%;
+
+          .detailLocation {
+            margin-bottom: 20px;
+            background: #FFF;
+            border: 1px solid #EAEAEA;
+            border-radius: 5px;
+
+            .map {
+              height: 204px;
+            }
+
+            .detail {
+              padding: 15px 23px 25px;
+              border-top: 1px solid #EAEAEA;
+
+              & > div {
+                display: flex;
+                justify-content: space-between;
+                padding: 15px 0;
+                border-bottom: 1px solid #EAEAEA;
+
+                .left {
+                  display: flex;
+                  flex-direction: column;
+
+                  span {
+                    font: {
+                      size: 16px;
+                      weight: 500;
+                    }
+                  }
+
+                  .opposite {
+                    font-size: 14px;
+                    color: #848484;
+                  }
+
+                  .address {
+                    font: {
+                      size: 18px;
+                      weight: 700;
+                    }
+                    color: #021B9C;
+                  }
+                }
+
+                .right { 
+
+                  span {
+                    font-size: 14px;
+                    color: #848484;
+                    margin-right: 12px;
+                    line-height: 1;
+                  }
+                }
+
+                &:last-child {
+                  padding: 25.5px 0;
+                  border-bottom: none;
+                  display: flex;
+                  justify-content: flex-start;
+
+                  img {
+                    margin-right: 13.5px;
+                  }
+                }
+              }
+            }
+          }
+
+          .callOrder {
+            background: #FFF;
+            border: 1px solid #EAEAEA;
+            border-radius: 5px;
+            padding: 30px 16px;
+
+            p {
+              text-align: center;
+              margin-bottom: 10px;
+              color: #000000;
+              font: {
+                size: 18px;
+                weight: 700;
+              }
+
+              img {
+                margin-right: 12px;
+              }
+            }
+
+            button {
+              width: 100%;
+              height: 38px;
+              color: #FFF;
+              font: {
+                size: 15px;
+                weight: 600;
+              }
+              border-radius: 5px;
+              border: none;
+              background: #76C303;
+            }
+          }
+        }
+      }
+
+      .reviews {
+        width: 67%;
+        padding: 0 0px 100px 20px;
+        .recommendedReviews {
+          .title {
+            font: {
+              size: 22px;
+              weight: 700;
+            }
+            margin-bottom: 20px;
+          }
+        }
+
+        .reviewForm {
+          background: #FFF;
+          border: 1px solid #EAEAEA;
+          border-radius: 5px;
+          padding: 20px 30px 40px;
+
+          & > .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #EAEAEA;
+
+            .title {
+              display: flex;
+              align-items: center;
+
+              font: {
+                size: 18px;
+                weight: 700;
+              }
+
+              img {
+                margin-right: 15px;
+              }
+            }
+
+            .icons {
+              cursor: pointer;
+            }
+          }
+
+          .body {
+            padding-top: 20px;
+
+            .header {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-bottom: 24px;
+
+              .left {
+                span {
+                  font-size: 14px;
+                  display: block;
+                  margin-bottom: 11px;
+                }
+
+                img {
+                  margin-right: 11px;
+                }
+              }
+
+              .right {
+                button {
+                  font: {
+                    size: 15px;
+                    weight: 500;
+                  }
+                  height: 32px;
+                  border-radius: 5px;
+                  padding: 0 25px;
+                  color: #FFF;
+                  background: #76C303;
+                  border: none;
+
+                  &:first-child {
+                    background: none;
+                    color: #000;
+                  }
+                }
+              }
+            }
+
+            .form {
+              .formControl {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                label {
+                  margin-bottom: 12px;
+                  font: {
+                    size: 16px;
+                    weight: 700;
+                  }
+
+                  span {
+                    color: #FC0606;
+                  }
+                }
+
+                input, textarea {
+                  width: 100%;
+                  background: #F7F7F7;
+                  font-size: 14px;
+                  padding: 0 18px;
+                  border-radius: 5px;
+                  border: 1px solid#EAEAEA;
+                  height: 40px;
+                  margin-bottom: 12px;
+                }
+
+                textarea {
+                  min-height: 150px;
+                  padding: 10px 18px;
+                }
+              }
+            }
+
+            & > p {
+              font-size: 14px;
+              margin-bottom: 22px;
+            }
+
+            & > button {
+              background: #021B9C;
+              border-radius: 5px;
+              color: #FFF;
+              height: 38px;
+              padding: 0 22px;
+              border: none;
+
+              font: {
+                size: 16px;
+                weight: 700;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 1000px) {
+  .container {
+    .banner {
+    }
+
+    .mainContainer {
+      .mainContent {
+        .firstDiv {
+          flex-direction: column;
+
+          & > .left {
+            width: 100%;
+          }
+
+          & > .right {
+            width: 100%;
+            padding-left: 0;
+          }
+        }
+
+        .reviews {
+          width: 100%;
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .modal {
+    .main {
+      width: 350px;
+      height: auto;
+      padding: 23px;
+      padding-bottom: 32px;
+
+      .header {
+        padding-bottom: 16px;
+
+        .title {
+          font-size: 13px;
+        }
+
+        img {
+          width: 12px;
+          height: 12px;
+        }
+      }
+
+      .body {
+        .socialButtons {
+          margin-bottom: 7px;
+          button {
+            height: 30px;
+
+            img {
+              height: 12px;
+            }
+          }
+        }
+
+        .address {
+          height: 35px;
+          overflow: hidden;
+
+          button {
+            padding: 0 12px;
+            img {
+              width: 12px;
+              height: 12px;
+            }
+          }
+
+          p {
+            flex-shrink: 0;
+            font-size: 12px;
+          }
+
+        }
+        .or {
+          padding: 9px 0;
+          font-size: 10px;
+        }
+
+        .to {
+          input {
+            height: 30px;
+            font-size: 12px;
+          }
+        }
+
+        .note {
+          margin-bottom: 15px;
+          label {
+            font-size: 9px;
+            margin-bottom: 9px;
+          }
+
+          textarea {
+            height: 66px;
+            font-size: 12px;
+            padding: 6px 13px;
+          }
+        }
+
+        button {
+          width: 126px;
+          height: 27px;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+  .container {
+    .banner {
+      .slider {
+        height: 300px;
+      }
+
+      .bannerContainer {
+        .content {
+          padding-bottom: 23px;
+
+          & > .left {
+            flex-direction: column;
+
+            .left {
+              width: 66px;
+              height: 66px;
+              margin-bottom: 10px;
+
+              img {
+                width: 66px;
+                height: 66px;
+              }
+            }
+
+            .right {
+              .name {
+                font-size: 15px;
+                margin-bottom: 0;
+              }
+
+              .star {
+                img {
+                  width: 12px;
+                  height: 11px;
+                  margin-right: 4px;
+                }
+
+                span {
+                  font-size: 12px!important;
+                  margin-left: 3px;
+                }
+              }
+
+              .services {
+                margin-bottom: 5px;
+                ul {
+                  li {
+                    font-size: 12px;
+                    margin-right: 13px;
+                  }
+                }
+              }
+
+              .claimed {
+                img {
+                  width: 19px;
+                  height: 19px;
+                  margin-right: 6px;
+                }
+
+                font-size: 14px;
+                margin-bottom: 4px;
+              }
+
+              .time {
+                font-size: 14px;
+              }
+            }
+          }
+
+          & > .right {
+            button {
+              font-size: 12px;
+              width: 115px;
+              height: 29px;
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .mainContainer {
+      .mainContent {
+        .firstDiv {
+          padding-top: 24px;
+          .left {
+            .toolbar {
+              padding-bottom: 14px;
+              button {
+                font-size: 12px;
+                height: 35px;
+                padding: 0 10px;
+                margin-right: 6px;
+              }
+            }
+
+            .about {
+              margin: 12px 0 16px;
+              padding: 15px 14px;
+
+              .title {
+                font-size: 18px;
+                margin-bottom: 9px;
+              }
+
+              .description {
+                font-size: 14px;
+                line-height: 20px;
+              }
+            }
+
+            .covid19 {
+              margin-bottom: 38px;
+
+              .title {
+                font-size: 18px;
+                margin-bottom: 9px;
+              }
+
+              .description {
+                font-size: 14px;
+                line-height: 20px;
+              }
+            }
+
+            .services {
+              padding-bottom: 15px;
+              .title {
+                font-size: 18px;
+                margin-bottom: 10px;
+              }
+
+              .content {
+                ul {
+                  li {
+                    font-size: 15px;
+                  }
+                }
+              }
+            }
+
+            .paymentMethods {
+              padding: 14px 0;
+              .item {
+                align-items: center;
+                margin-bottom: 8px;
+                img {
+                  margin-right: 8px;
+                }
+
+                font-size: 14px;
+              }
+            }
+
+            .askCommunity {
+              padding: 23px 0 32px;
+              .header {
+                margin-bottom: 9px;
+
+                .title {
+                  font-size: 18px;
+                }
+
+                button {
+                  display: flex;
+                  align-items: center;
+                  span {
+                    font-size: 14px;
+                  }
+
+                  img {
+                    width: 10px;
+                    height: 10px;
+                    margin-left: 9px;
+                  }
+                }
+              }
+
+              .body {
+                font-size: 14px;
+              }
+            }
+          }
+
+          .right {
+            .detailLocation {
+              margin-bottom: 15px;
+              .map {
+                height: 188px;
+              }
+
+              .detail {
+                padding: 20px;
+
+                & > div {
+                  padding: 12px 0 15px;
+                  font-size: 14px;
+
+                  span {
+                    font-size: 14px!important;
+                  }
+
+                  .opposite {
+                    font-size: 12px!important;
+                  }
+
+                  .address {
+                    font-size: 16px!important;
+                  }
+
+                  .right {
+                    span {
+                      font-size: 12px!important;
+                    }
+                  }
+
+                  &:last-child {
+                    padding: 20px 0;
+                  }
+                }
+              }
+            }
+
+            .callOrder {
+              padding: 28px 14px;
+              p {
+                font-size: 16px!important;
+                margin-bottom: 10px;
+              }
+
+              button {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+
+        .reviews {
+          padding-bottom: 25px;
+          .recommendedReviews {
+            .title {
+              font-size: 18px;
+              margin-bottom: 11px;
+            }
+          }
+
+          .reviewForm {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

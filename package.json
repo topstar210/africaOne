@@ -1,0 +1,20 @@
+{
+  "name": "africa-one",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "google-map-react": "^2.1.9",
+    "next": "10.0.5",
+    "react": "17.0.1",
+    "react-cool-onclickoutside": "^1.5.9",
+    "react-dom": "17.0.1",
+    "react-slick": "^0.28.1",
+    "sass": "^1.32.5",
+    "slick-carousel": "^1.8.1"
+  }
+}
